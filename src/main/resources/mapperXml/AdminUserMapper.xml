@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group.healthycustom.client.dao.mapping.UserMapperXml">
+    <select id="selectAllUser" resultType="com.group.healthycustom.client.pojo.User">
+        select
+        `u_id`,
+        `username`,
+        `password`,
+        `sex`,
+        `b_id`,
+        `c_id`
+        from
+        `user`
+        where
+        `flag` = 1
+    </select>
+
+    <select id="selectUserById" resultType="com.group.healthycustom.client.pojo.User">
+        select
+        `u_id`,
+        `username`,
+        `password`,
+        `sex`,
+        `b_id`,
+        `c_id`
+        from
+        `user`
+        where
+        flag = 1
+        and
+        `u_id` = #{uId};
+    </select>
+
+    <insert id="addUser">
+INSERT INTO `cuff`.`user` (
+	`username`,
+	`password`,
+	`sex`,
+	`b_id`,
+	`c_id`
+)
+VALUES
+	(
+		#{username},
+		#{password},
+		#{sex},
+		#{bId},
+		#{cId}
+	);
+    </insert>
+
+    <update id="updateUser">
+        UPDATE `cuff`.`user`
+        <set>
+            <if test="null!=username">
+                `username` = #{username},
+            </if>
+            <if test="null!=password">
+                `password` = #{password},
+            </if><if test="null!=sex">
+            `sex` = #{sex},
+            </if><if test="null!=bId">
+                `b_id` = #{bId},
+            </if><if test="null!=cId">
+                `c_id` = #{cId},
+            </if>
+        </set>
+        WHERE
+        `u_id` = #{uId};
+    </update>
+
+    <update id="deleteUser">
+        UPDATE `cuff`.`user`
+        set
+            `flag` = 0
+        WHERE
+        `u_id` = #{uId};
+    </update>
+
+</mapper>

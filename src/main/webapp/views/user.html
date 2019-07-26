@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    <!-- 引入 Bootstrap -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet"/>
+    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <!-- 包括所有已编译的插件 -->
+    <script src="../static/js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var bId = $("#bId").val();
+                $("#show_single").click(function(){
+                    $.ajax({
+                        type: "POST",
+                        url:"/bracelet/checkById",
+                        data:"bId"+bId,
+                        dataType:"json",
+                        success: function (msg) {
+                            alert(mag);
+                            $("#show").html("<table><tr><th>手环编号</th><th>体温</th><th>心率</th><th>地址</th><th>步数</th><th>卡路里</th></tr>" +
+                                "<tr><td>"+msg.bId+"</td><td>"+msg.temperature+"</td><td>"+msg.heartRate+"</td><td>"+msg.adress+"</td><td>"+msg.exercise+"</td><td>"+msg.calorie+"</td></tr></table>");
+                        }
+                    });
+                });
+        });
+    </script>
+
+</head>
+
+<body>
+
+用户主页：<span th:text="欢迎用户+${user.getUsername()}"></span><br/>
+
+<p id="bId" th:text="${user.bId}"></p>
+
+<div>
+    <button>展示个人信息</button>
+</div>
+
+<div>
+    <button>绑定智能手环</button>
+</div>
+
+<div>
+    <button id="show_single">展示手环信息</button>
+    说明：未绑定不能展示
+</div>
+
+<div>
+
+    <button>展示病例及药单</button>
+
+</div>
+
+
+<div>
+
+    <a href="#"><button>在线就医</button></a>
+
+</div>
+
+<div>
+
+    <p id="show"></p>
+
+</div>
+
+
+
+
+
+</body>
+</html>

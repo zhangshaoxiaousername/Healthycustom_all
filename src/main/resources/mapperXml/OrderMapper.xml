@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group.healthycustom.client.dao.mapping.OrderMapper" >
+  <resultMap id="BaseResultMap" type="com.group.healthycustom.client.pojo.Order" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="o_id" property="oId" jdbcType="INTEGER" />
+    <result column="medicine" property="medicine" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="INTEGER" />
+    <result column="cread_date" property="creadDate" jdbcType="TIMESTAMP" />
+    <result column="o_flag" property="oFlag" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    o_id, medicine, price, cread_date, o_flag
+  </sql>
+</mapper>

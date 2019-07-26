@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group.healthycustom.client.dao.mapping.AdminMapper" >
+  <resultMap id="BaseResultMap" type="com.group.healthycustom.client.pojo.Admin" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="a_id" property="aId" jdbcType="INTEGER" />
+    <result column="admin_name" property="adminName" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="real_name" property="realName" jdbcType="VARCHAR" />
+    <result column="flag" property="flag" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    a_id, admin_name, password, real_name, flag
+  </sql>
+</mapper>

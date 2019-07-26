@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group.healthycustom.client.dao.mapping.AppOrderMapper">
+    <select id="select45" resultType="com.group.healthycustom.client.pojo.AppOrder">
+SELECT
+	*
+FROM
+	apporder
+    </select>
+
+	<update id="update" parameterType="com.group.healthycustom.client.pojo.AppOrder">
+
+		UPDATE apporder
+		SET
+
+				u_id = #{uId},
+
+				username = #{username},
+
+				doctor_name = #{doctorName}
+
+			WHERE
+	a_id = #{aId};
+	</update>
+
+
+	<insert id="add" parameterType="com.group.healthycustom.client.pojo.AppOrder" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO apporder (
+	u_id,
+	username,
+	doctor_name,
+
+	flag
+)
+VALUES
+	(
+		#{uId},
+		#{username},
+		#{doctorName},
+        1
+	)
+</insert>
+
+	<delete id="delete" parameterType="com.group.healthycustom.client.pojo.AppOrder">
+		delete from apporder where a_id=#{aId}
+	</delete>
+
+
+</mapper>

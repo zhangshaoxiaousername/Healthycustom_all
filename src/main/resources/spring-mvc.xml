@@ -6,14 +6,92 @@
 
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!--只扫描Controller-->
-    <context:component-scan base-package="com.group.healthycustom.group.*.controller" use-default-filters="false">
+<!--    &lt;!&ndash;只扫描Controller&ndash;&gt;
+    <context:component-scan base-package="com.group.healthycustom.*.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-    </context:component-scan>
+    </context:component-scan>-->
 
+
+    <context:component-scan base-package="com.group.healthycustom.*"/>
     <!--默认的注解映射的支持，使注解生效，例如@ResponseBody-->
     <mvc:annotation-driven/>
+
     <!--静态资源映射-->
     <mvc:default-servlet-handler/>
+
+<!--    &lt;!&ndash; 定义视图文件解析 &ndash;&gt;
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        &lt;!&ndash;设置return内容前面的值&ndash;&gt;
+        &lt;!&ndash;web.view.prefix=/WEB-INF/views/&ndash;&gt;
+        <property name="prefix" value="/WEB-INF/views/"/>
+        &lt;!&ndash;设置return内容后面的值&ndash;&gt;
+        &lt;!&ndash;web.view.suffix=.jsp&ndash;&gt;
+        <property name="suffix" value=".html"/>
+    </bean>-->
+
+
+    <!-- 定义视图文件解析 -->
+    <!-- 模板解析器  -->
+    <bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+        <property name="prefix" value="/views/" />
+        <property name="suffix" value=".html" />
+        <property name="templateMode" value="HTML5" />
+        <property name="characterEncoding" value="UTF-8"/>
+    </bean>
+
+    <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolver" ref="templateResolver" />
+    </bean>
+
+    <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="templateEngine" />
+        <property name="characterEncoding"  value="UTF-8" />
+    </bean>
+
+    <!-- 静态资源映射 -->
+    <!--设置非return内容访问的路径，以及缓存的时间（毫秒）-->
+    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
+
+  <!--  &lt;!&ndash;配置拦截器&ndash;&gt;
+    <mvc:interceptors>
+        &lt;!&ndash;配置单个拦截器&ndash;&gt;
+        <mvc:interceptor>
+            &lt;!&ndash;要拦截的具体方法&ndash;&gt;
+            <mvc:mapping path="/user/**"/>
+            &lt;!&ndash;不要拦截的具体方法&ndash;&gt;
+            <mvc:exclude-mapping path="/user/toRegister"/>
+            &lt;!&ndash;不要拦截的具体方法&ndash;&gt;
+            <mvc:exclude-mapping path="/user/toLogin"/>
+
+            &lt;!&ndash;配置拦截器对象&ndash;&gt;
+            <bean class="com.group.healthycustom.client.interceptor.MyInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>-->
+
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>application/json</value>
+                        <value>application/xml;charset=UTF-8</value>
+                    </list>
+                </property>
+                <property name="features">
+                    <list>
+                        <value>WriteMapNullValue</value>
+                        <value>WriteNullNumberAsZero</value>
+                        <value>WriteNullListAsEmpty</value>
+                        <value>WriteNullStringAsEmpty</value>
+                        <value>WriteNullBooleanAsFalse</value>
+                        <value>WriteDateUseDateFormat</value>
+                    </list>
+                </property>
+            </bean>
+
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
 
 </beans>

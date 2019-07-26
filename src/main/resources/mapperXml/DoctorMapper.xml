@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group.healthycustom.client.dao.mapping.DoctorMapper">
+    <select id="select78" resultType="com.group.healthycustom.client.pojo.Doctor">
+SELECT
+	d_id,
+	doctor_name,
+	record,
+	create_date,
+	flag
+FROM
+	doctor
+    </select>
+</mapper>

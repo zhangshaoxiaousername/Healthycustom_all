@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>客服管理</title>
+    <link href="../static/asserts/plugins/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet"/>
+    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- JQuery -->
+    <script src="../static/asserts/plugins/jquery/jquery-2.1.1.min.js"></script>
+    <!-- 引入bootstrap 的插件 -->
+    <script src="../static/asserts/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h2>客服情况一览表</h2>
+<div class="container">
+    <a th:href="@{/admin/go/add/admin}">添加客服</a>
+    <table border="1" cellspacing="0" class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>保留</th>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>密码</th>
+            <th>真实姓名</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="admin : ${admins}" >
+            <td><input th:type="checkbox" th:name="id" th:value="${admin.aId}"/></td>
+            <td th:text="${admin.aId}">编号</td>
+            <td th:text="${admin.adminName}">姓名</td>
+            <td th:text="${admin.password}">密码</td>
+            <td th:text="${admin.realName}">真实姓名</td>
+            <td><a th:href="@{/admin/go/update/admin(aId=${admin.aId})}">编辑</a >/<a th:href="@{/admin/admin/delete(aId=${admin.aId})}">删除</a></td>
+        </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+    <div th:utext="${deleteMsg}"></div>
+    <div th:utext="${deleteId}"></div>
+</div>
+</body>
+</html>

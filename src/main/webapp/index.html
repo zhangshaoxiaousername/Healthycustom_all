@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>主索引页面</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="static/css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="static/css/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome icons -->
+<!-- portfolio -->	
+<link rel="stylesheet" href="static/css/chocolat.css" type="text/css" media="all">
+<!-- //portfolio -->	
+<!-- font -->
+<link href="http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="static/js/jquery-1.11.1.min.js"></script>
+<script src="static/js/bootstrap.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script> 
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner jarallax">
+		<div class="agileinfo-dot">
+			<div class="header-top">
+				<div class="header">
+					<div class="header-top-info">
+						<nav class="navbar navbar-default">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<div class="agileits-logo">
+									<h1><a href="index.html">私人穿戴 <span>，健康管家</span></a></h1>
+								</div>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+								<nav>
+									<ul class="nav navbar-nav">
+										<li class="active"><a href="index.html">主页</a></li>
+										<li><a href="#about" class="scroll">关于产品</a></li>
+										<li><a href="#services" class="scroll">登录</a></li>
+										<li><a href="#gallery" class="scroll">面貌</a></li>
+										<li><a href="#team" class="scroll">团队</a></li>
+										<li><a href="#events" class="scroll">事件</a></li>
+										<li><a href="#mail" class="scroll">联系我们</a></li>
+									</ul>
+								</nav>
+							</div>
+							<!-- /.navbar-collapse -->
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="w3layouts-banner-info">
+				<div class="container">
+					<div class="w3layouts-banner-slider">
+						<div class="w3layouts-banner-top-slider">
+							<div class="slider">
+								<div class="callbacks_container">
+									<ul class="rslides callbacks callbacks1" id="slider4">
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<h2>屏幕前的你<span>是否。。</span><span>疑心过</span>身体状况</h2>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<h2>那么，现在<span>别再担心</span><span>不清楚</span>健康状况</h2>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<h2>一款全新的<span>可穿戴的</span><span>人体健康</span>管理手环</h2>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<h2>随时随地<span>为您</span><span>监控健康</span>防患未然</h2>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="clearfix"> </div>
+								<script src="static/js/responsiveslides.min.js"></script>
+								<script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+									  // Slideshow 4
+									  $("#slider4").responsiveSlides({
+										auto: true,
+										pager:true,
+										nav:true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+										  $('.events').append("<li>before event fired.</li>");
+										},
+										after: function () {
+										  $('.events').append("<li>after event fired.</li>");
+										}
+									  });
+								
+									});
+								 </script>
+								<!--banner Slider starts Here-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- welcome -->
+	<div class="welcome" id="about">
+		<div class="container">
+			<div class="agileits-heading">
+				<h2>关于产品</h2>
+			</div>
+			<div class="agileinfo-about-info">
+				<h4>这款手环，防水，防油，一次充电续航达三周！！！</h4>
+				<p>目前已支持的功能：监测使用者心率，定位使用者位置，心率突发失常可以自动发送求救信息，定期推送健康咨询，更多功能请关注后续产品</p>
+			</div>
+			<div class="welcome-agileinfo">
+				<div class="col-md-6 col-sm-6 col-xs-6 welcome-grids">
+					<div class="view view-w3-agile">
+						<img src="static/images/4.jpg" alt="" class="img-responsive" />
+						<div class="agileits-w3layouts-mask">
+							<h4>Lorem ipsum</h4>
+							<p>Nullam ut nibh dapibus elit placerat ullamcorper</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 welcome-grids">
+					<div class="view view-w3-agile">
+						<img src="static/images/5.jpg" alt="" class="img-responsive" />
+						<div class="agileits-w3layouts-mask">
+							<h4>Praesent egestas</h4>
+							<p>Nullam ut nibh dapibus elit placerat ullamcorper</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //welcome -->
+	<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>用户登录</h3>
+			</div>
+			<div class="specialty-grids-top">
+				<!--此处链接到客服登录页面-->
+				<a href="/user/toLogin">
+				<div class="col-md-4 service-box" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<figure class="icon">
+						<i class="fa fa-ambulance" aria-hidden="true"></i>
+					</figure>
+					<h5>客服登录</h5>
+					<p>客服人员在此处登录帮助用户做好问题分类</p>
+				</div>
+				</a>
+				<!--此处链接到用户登录页面-->
+				<a href="/user/toLogin">
+				<div class="col-md-4 service-box">
+					<figure class="icon">
+						<i class="fa fa-wheelchair" aria-hidden="true"></i>
+					</figure>
+					<h5>用户登录</h5>
+					<p>用户可以在登录并查看您的健康信息和管理您的手环</p>
+				</div>
+				</a>
+				<!--此处链接到医生登录页面-->
+				<!--<a href="#">
+				<div class="col-md-4 service-box">
+					<figure class="icon">
+						<i class="fa fa-user-md" aria-hidden="true"></i>
+					</figure>
+					<h5>医生登录</h5>
+					<p>医生在次数登录以帮助用户解决问题</p>
+				</div>
+				</a>-->
+				<!--此处链接到管理员登录页面-->
+				<a href="/admin/login">
+				<div class="col-md-4 service-box">
+					<figure class="icon">
+						<i class="fa fa-plus-square" aria-hidden="true"></i>
+					</figure>
+					<h5>管理员登录</h5>
+					<p>管理员可以在此处登录</p>
+				</div>
+				</a>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+
+	<!-- portfolio -->
+	<div class="portfolio" id="gallery">
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>工作面貌</h3>
+			</div>
+			<ul class="simplefilter w3layouts agileits">
+				<li class="active w3layouts agileits" data-filter="all">全部</li>
+				<li class="w3layouts agileits" data-filter="1">医生组</li>
+				<li class="w3layouts agileits" data-filter="2">客服组</li>
+				<li class="w3layouts agileits" data-filter="3">研发组</li>
+				<li class="w3layouts agileits" data-filter="4">监管组</li>
+				<li class="w3layouts agileits" data-filter="5">后勤组</li>
+			</ul>
+
+			<div class="filtr-container w3layouts agileits">
+
+				<div class="filtr-item w3layouts agileits portfolio-t" data-category="1, 5" data-sort="Busy streets">
+					<a href="static/images/p1.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p1.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="2, 5" data-sort="Luminous night">
+					<a href="static/images/p2.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p2.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="1, 4" data-sort="City wonders">
+					<a href="static/images/p3.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p3.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="3" data-sort="In production">
+					<a href="static/images/p4.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p4.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="3, 4" data-sort="Industrial site">
+					<a href="static/images/p5.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p5.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Peaceful lake">
+					<a href="static/images/p6.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p6.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="1, 5" data-sort="City lights">
+					<a href="static/images/p7.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p7.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Dreamhouse">
+					<a href="static/images/p8.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p8.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Dreamhouse">
+					<a href="static/images/p1.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+						<figure>
+							<img src="static/images/p1.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+							<figcaption>
+								<h3>Medico <span>Club</span></h3>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //portfolio -->
+	<!-- team -->
+	<div class="jarallax team" id="team">
+		<div class="team-dot">
+			<div class="container">
+				<div class="agileits-heading team-heading">
+					<h3>优秀员工</h3>
+				</div>
+				<div class="agileits-team-grids">
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="static/images/t1.jpg" alt="">
+							<div class="team-caption"> 
+								<h4>Peter Parker</h4>
+								<p>Fusce laoreet</p>
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-rss"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="static/images/t2.jpg" alt="">
+							<div class="team-caption"> 
+								<h4>Johan Botha</h4>
+								<p>Fusce laoreet</p>
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-rss"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="static/images/t3.jpg" alt="">
+							<div class="team-caption"> 
+								<h4>Justo Congue</h4>
+								<p>Fusce laoreet</p>
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-rss"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="static/images/t4.jpg" alt="">
+							<div class="team-caption"> 
+								<h4>Steven Wilson</h4>
+								<p>Fusce laoreet</p>
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-rss"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //team -->
+	<!-- events -->
+	<div class="w3-events" id="events"> 
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>近期要闻</h3>
+			</div>
+			<div class="events-info">
+				<div class="col-md-6 event-grids">
+					<div class="w3layouts-text">
+						<h4>20<span>May</span></h4>
+						<h6><a href="#" data-toggle="modal" data-target="#myModal">新款式上市</a></h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>为答谢广大用户支持，将推出儿童节特别款式，帮您随时找到孩子的位置</p>
+				</div>
+				<div class="col-md-6 event-grids">
+					<div class="w3layouts-text">
+						<h4>10<span>May</span></h4>
+						<h6><a href="#" data-toggle="modal" data-target="#myModal">Mauris vehicula vel augue non</a></h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>智能健康私人管家手环的销量突破了1,000,000。将推出新款式</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div> 
+	</div> 
+	<!-- //events -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+					<h4 class="modal-title">Medico <span>Club</span></h4>
+				</div> 
+				<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="static/images/1.jpg" alt="" />
+						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper.  Cras tempor massa luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- newsletter -->
+	<div class="newsletter jarallax">
+		<div class="w3-agile-newsletter">
+			<div class="container">
+				<div class="agileits-heading team-heading">
+					<h3>测试新款手环邀请码</h3>
+				</div>
+				<div class="newsletter-grids">
+					<div class="newsletter-left">
+						<p>在此处输入您的邀请码，获取新装备用于测评</p>
+					</div>
+					<div class="newsletter-right">
+						<form action="#" method="post">
+							<input type="text" placeholder="邀请码" name="Subscribe" required="">
+							<button class="btn1"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //newsletter -->
+	<!-- contact -->
+	<div class="contact" id="mail">
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>联系我们</h3>
+			</div>
+			<div class="w3layouts-contact-grids">
+				<div class="col-sm-3 w3layouts-contact-grid">
+					<i class="fa fa-trophy" aria-hidden="true"></i>
+					<h5>地址</h5>
+					<p>广东省，广州市，天河区，元岗街道，慧通产业园B9栋3楼，千锋教育</p>
+				</div>
+				<div class="col-sm-3 w3layouts-contact-grid">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<h5>联系电话/传真号码</h5>
+					<p>400-811-9990</p>
+					<p>020 87072061</p>
+				</div>
+				<div class="col-sm-3 w3layouts-contact-grid">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					<h5>邮箱</h5>
+					<p><a href="mailto:info@example.com"> qianfengedu@qf.edu.com</a></p>
+				</div>
+				<div class="col-sm-3 w3layouts-contact-grid">
+					<i class="fa fa-github" aria-hidden="true"></i>
+					<h5>社交软件联系</h5>
+					<p>可直接添加</p>
+					<div class="agileinfo-social-grids">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- contact-info -->
+	<div class="contact-info jarallax">
+		<div class="contact-info-grids">
+			<div class="container">
+				<div class="agileits-heading team-heading">
+					<h3>网站留言</h3>
+				</div>
+				<div class="contact-form">
+					<form action="#" method="post">
+						<input type="text" placeholder="名字" required="">
+						<input type="email" placeholder="邮箱" required="">
+						<input type="text" placeholder="电话" required="">
+						<textarea placeholder="留言信息" required></textarea>
+						<input type="submit" value="提交">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //contact-info -->
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<div class="copyright">
+				<p>Copyright 2011-2019 北京千锋互联科技有限公司 京ICP备12003911号-3 京公网安备11010802011455号</p>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+	<script src="static/js/jarallax.js"></script>
+	<script src="static/js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<script src="static/js/responsiveslides.min.js"></script>
+	<script type="text/javascript" src="static/js/move-top.js"></script>
+	<script type="text/javascript" src="static/js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- Tabs-JavaScript -->
+	<script src="static/js/jquery.filterizr.js"></script>
+		<script src="static/js/controls.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.filtr-container').filterizr();
+			});
+		</script>
+	<!-- //Tabs-JavaScript -->
+	<!-- PopUp-Box-JavaScript -->
+		<script src="static/js/jquery.chocolat.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.filtr-item a').Chocolat();
+			});
+		</script>
+	<!-- //PopUp-Box-JavaScript -->
+</body>	
+</html>

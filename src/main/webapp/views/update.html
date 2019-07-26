@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<form action="/other/update" >
+    <input name="aId" th:value="${id}"/>
+    预约人的ID:<input type="text"  name="uId" /><br/>
+    预约人:<input type="text" name="username" /><br/>
+    医生:<input type="text" name="doctorName" /><br/>
+
+
+    <input type="submit" value="修改"/>
+</form>
+</body>
+</html>

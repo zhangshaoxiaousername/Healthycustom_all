@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+</head>
+
+<body>
+<thead>
+
+</thead>
+
+<tbody>
+<table>
+药品信息
+
+<tr th:each="yao:${list}">
+    <td th:utext="${yao.getoId()}"></td>
+    <td th:utext="${yao.getMedicine()}"></td>
+    <td th:utext="${yao.getPrice()}"></td>
+    <td th:utext="${yao.getCreadDate()}"></td>
+    <td th:utext="${yao.getoFlag()}"></td><br/>
+</tr>
+</table>
+</tbody>
+<tbody>
+<table>
+空闲医生信息
+<tr th:each="doctor:${listdp}">
+    <td th:utext="${doctor.getdId()}"></td>
+    <td th:utext="${doctor.getDoctorName()}"></td>
+    <td th:utext="${doctor.getRecord()}"></td>
+    <td th:utext="${doctor.getCreateDate()}"></td>
+    <td th:utext="${doctor.getFlag()}"></td><br/>
+
+</tr>
+</table>
+</tbody>
+
+<tbody>
+<table>
+订单信息
+<tr th:each="appOrder:${listapp}">
+    <td th:utext="${appOrder.getaId()}"></td>
+    <td th:utext="${appOrder.getuId()}"></td>
+    <td th:utext="${appOrder.getUsername()}"></td>
+    <td th:utext="${appOrder.getDoctorName()}"></td>
+    <td th:utext="${appOrder.getCreateDate()}"></td><br/>
+    <td ><a th:href="@{'/other/delete?aId='+${appOrder.getaId()}}">删除</a></td>
+    <td ><a th:href="@{'/other/upda?aId='+${appOrder.getaId()}}">编辑</a></td>
+</tr>
+</table>
+</tbody>
+
+<br/>
+
+<br/>
+<a href="/other/aqq">添加</a>
+
+
+
+
+
+</body>
+</html>
